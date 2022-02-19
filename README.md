@@ -3,13 +3,12 @@
 1. API RUN
 
 Windows:
-- `venv/Scripts/activate`
+- `cd api`
+- `python -m venv bimvenv`
+- `bimvenv/Scripts/activate`
 - `pip install -r requirements.txt`
-- `django-admin startproject bimapplication .`
 - `./manage.py migrate`
-- `./manage.py createsuperuser`
 - `./mange.py runserver`
 
 macOS/Linux:
--
 - `pip install -r requirements.txt`
