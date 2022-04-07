@@ -19,3 +19,5 @@ coverage.*
 !.gitignore
 !.pre-commit-config.yaml
 bimvenv/
+api/dotnet/BimApi/bin
+api/dotnet/BimApi/obj
