@@ -9,19 +9,29 @@ public class CategoryService
         {
             Id = Guid.NewGuid(),
             Name = "Construction",
-            CategoryList = GetCategories()
+            CategoryList = GetAllCategories()
         });
 
         return metacategories;
     }
 
-    public List<Category> GetCategories()
+    public List<Category> GetAllCategories()
     {
         var categoryList = new List<Category>();
         categoryList.Add(new Category { Id = Guid.NewGuid(), Name = "Beams" });
         categoryList.Add(new Category { Id = Guid.NewGuid(), Name = "Lintels" });
 
         return categoryList;
+    }
+
+
+    public Category GetCategoryByName(String searchName)
+    {
+        var categoryList = GetAllCategories();
+
+        var result = categoryList.Find(x => x.Name == searchName);
+
+        return result ?? new Category();
     }
 
 }
